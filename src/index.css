@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-primary: var(--accent);
+  --color-primary-foreground: #ffffff;
+  --color-surface: var(--bg-surface);
+  --color-muted: var(--text-muted);
+  --color-accent-dark: var(--accent-dark);
+  --color-border: var(--border-color);
+}
+
+:root, .dark {
+  --bg-primary: #020617;
+  --bg-surface: #0f172a;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-dark: #1e3a8a;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-surface: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary selection:text-white transition-colors duration-500 overflow-x-hidden;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500;
+}
