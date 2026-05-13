@@ -52,7 +52,7 @@ export const portfolioData = {
   },
   socials: {
     github: "https://github.com/zunoor-ahmad",
-    linkedin: "https://linkedin.com/in/zunoor-ahmad",
+    linkedin: "https://www.linkedin.com/in/zunoor-ahmad-dev",
     twitter: "https://x.com/",
   } as Record<string, string>,
 };

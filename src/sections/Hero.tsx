@@ -29,7 +29,10 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 text-foreground">
-            {portfolioData.hero.title} <br />
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold text-gradient mb-2">
+              {portfolioData.brand}
+            </span>
+            <span className="block">{portfolioData.hero.title}</span>
             <span className="text-muted text-4xl md:text-5xl lg:text-6xl font-bold block mt-2">
               {portfolioData.hero.subtitle}
             </span>
